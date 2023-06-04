@@ -1,6 +1,6 @@
 import java.util.Stack;
 public class IterativePostorderTraversal {
-    public void iterative_postorder_traversal(BinaryTree.TreeNode root){
+    public void traversal(BinaryTree.TreeNode root){
         Stack<BinaryTree.TreeNode> stack =  new Stack<>();
         BinaryTree.TreeNode pointer = root;
         stack.push(pointer);
