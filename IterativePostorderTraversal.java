@@ -2,19 +2,27 @@ import java.util.Stack;
 public class IterativePostorderTraversal {
     public void traversal(BinaryTree.TreeNode root){
         Stack<BinaryTree.TreeNode> stack =  new Stack<>();
-        BinaryTree.TreeNode pointer = root;
-        stack.push(pointer);
-        while(!stack.isEmpty()){
-            if(pointer!=null){
-                if(pointer.right!=null){
-                    stack.push(pointer.right);
-                }
-                if(pointer.left!=null){
-                    stack.push(pointer.left);
-                }
-                pointer = stack.pop();
-                System.out.print(pointer.data+" ");
+        BinaryTree.TreeNode current = root;
+        while(!stack.isEmpty()||current!=null){
+            if(current!=null){
+                stack.push(current);
+                current = current.left;
             }
+            else{
+                BinaryTree.TreeNode pointer = stack.peek().right;
+                if(pointer==null){
+                    pointer = stack.pop();
+                    System.out.print(pointer.data+" ");
+                    while(!stack.isEmpty()&&pointer==stack.peek().right){
+                        pointer = stack.pop();
+                        System.out.print(pointer.data+" ");
+                    }
+                }
+                else{
+                    current = pointer;
+                }
+            }
+            
         }
     }
 }
