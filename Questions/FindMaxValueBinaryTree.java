@@ -7,6 +7,9 @@ public class FindMaxValueBinaryTree {
     
     public int find_max(BinaryTree.TreeNode root){
         int max = 0;
+        if(root == null){
+            return Integer.MIN_VALUE;
+        }
         Queue<BinaryTree.TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while(!queue.isEmpty()){
