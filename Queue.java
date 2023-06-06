@@ -56,8 +56,10 @@ public class Queue {
             queue.enqeue(data);
         }
         queue.print();
+        System.out.println("Length = "+queue.length);
         queue.dequeue();
         queue.print();
+        System.out.println("Length = "+queue.length);
         scanner.close();
     }
 }
