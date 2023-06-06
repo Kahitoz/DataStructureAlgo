@@ -8,6 +8,7 @@ public class Main {
         IterativeInorderTraversal iterativeInorderTraversal = new IterativeInorderTraversal();
         RecursivePostorderTraversal recursivePostorderTraversal = new RecursivePostorderTraversal();
         IterativePostorderTraversal iterativePostorderTraversal =new IterativePostorderTraversal();
+        LevelOrderTraversal levelOrderTraversal = new LevelOrderTraversal();
         binaryTree.createBinaryTree();
 
         System.out.println("Binary Tree is  - ");
@@ -32,5 +33,8 @@ public class Main {
         System.out.println();
         System.out.println("Result for Iterative postorder traversal");
         iterativePostorderTraversal.traversal(binaryTree.root);
+        System.out.println();
+        System.out.println("Result for Level order traversal");
+        levelOrderTraversal.traverse(binaryTree.root);
     }
 }
