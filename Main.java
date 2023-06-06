@@ -11,7 +11,7 @@ public class Main {
         binaryTree.createBinaryTree();
 
         System.out.println("Binary Tree is  - ");
-        for(int i =0; i<5; i++){
+        for(int i =0; i<7; i++){
             System.out.print(i+" ");
         }
         System.out.println();
