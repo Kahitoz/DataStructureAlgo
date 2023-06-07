@@ -17,20 +17,28 @@ public class InsertBinaryTree {
             }
             if(pointer.right!=null){
                 queue.offer(pointer.right);
+
             }
 
         }
     }
 
-    public BinarySearchTree.node recursive(BinarySearchTree.node data){
-        BinarySearchTree.node pointer = new BinarySearchTree.node(data);
-       
-        return pointer;
+    public BinarySearchTree.node insert(BinarySearchTree.node root, int value){
+        if(root == null){
+            root = new BinarySearchTree.node(value);
+            return root;
+        }
+        if(value < (int)root.data){
+            root.left =insert(root.left, value);
+        }else{
+            root.right = insert(root.right, value);
+        }
+        return root;
     }
 
     public static void main(String []args){
         Scanner scanner = new Scanner(System.in);
-
         scanner.close();
+         
     }
 }
