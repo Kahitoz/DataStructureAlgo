@@ -1,4 +1,4 @@
-public class BinaryTreeStack {
+public class BST_insert {
     BinaryTree binaryTree = new BinaryTree();
     Node top;
     int length;
@@ -12,7 +12,7 @@ public class BinaryTreeStack {
         }
     }
 
-    public BinaryTreeStack() {
+    public BST_insert() {
         this.top = null;
         this.length = 0;
     }

@@ -3,7 +3,7 @@ public class IterativePreorderTraversal {
         if(root == null){
             return;
         }
-        BinaryTreeStack binaryTreeStack = new BinaryTreeStack();
+        BST_insert binaryTreeStack = new BST_insert();
         binaryTreeStack.push(root);
         while(!binaryTreeStack.isEmpty()){
             BinaryTree.TreeNode temp = binaryTreeStack.pop();
