@@ -1,6 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class BinarySearchTree {
     Node root;
@@ -25,7 +26,6 @@ public class BinarySearchTree {
         } else if (data > root.data) {
             root.right = insert(root.right, data);
         }
-
         return root;
     }
 
@@ -58,6 +58,25 @@ public class BinarySearchTree {
         }
     }
 
+    public void inorder(Node root){
+        if(root == null){
+            return;
+        }
+        Stack<Node> stack = new Stack<>();
+        Node pointer = root;
+        while(!stack.isEmpty()||pointer!=null){
+            if(pointer!=null){
+                stack.push(pointer);
+                pointer=pointer.left;
+            }
+            else{
+                pointer = stack.pop();
+                System.out.println(pointer.data+" ");
+                pointer = pointer.right;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
         Scanner scanner = new Scanner(System.in);
@@ -66,7 +85,8 @@ public class BinarySearchTree {
             int value = scanner.nextInt();
             bst.insert(value);
         }
-        bst.level_order(bst.root);
+        //bst.level_order(bst.root);
+        bst.inorder(bst.root);
         scanner.close();
     }
 }
