@@ -3,7 +3,7 @@ public class IterativeInorderTraversal {
         if(root == null){
             return;
         }
-        BST_insert stack = new BST_insert();
+        BinaryTreeStack stack = new BinaryTreeStack();
         BinaryTree.TreeNode temp = root;
         while(!stack.isEmpty()||temp!=null){
             if(temp!=null){
