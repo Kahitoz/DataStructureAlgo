@@ -42,36 +42,33 @@ public class BinarySearchTree {
         queue.offer(root);
 
         while (!queue.isEmpty()) {
-            int levelSize = queue.size();
-            for (int i = 0; i < levelSize; i++) {
-                Node current = queue.poll();
-                System.out.print(current.data + " ");
 
-                if (current.left != null) {
-                    queue.add(current.left);
-                }
-                if (current.right != null) {
-                    queue.add(current.right);
-                }
+            Node current = queue.poll();
+            System.out.print(current.data + " ");
+
+            if (current.left != null) {
+                queue.add(current.left);
             }
-            System.out.println();
+            if (current.right != null) {
+                queue.add(current.right);
+            }
+
         }
     }
 
-    public void inorder(Node root){
-        if(root == null){
+    public void inorder(Node root) {
+        if (root == null) {
             return;
         }
         Stack<Node> stack = new Stack<>();
         Node pointer = root;
-        while(!stack.isEmpty()||pointer!=null){
-            if(pointer!=null){
+        while (!stack.isEmpty() || pointer != null) {
+            if (pointer != null) {
                 stack.push(pointer);
-                pointer=pointer.left;
-            }
-            else{
+                pointer = pointer.left;
+            } else {
                 pointer = stack.pop();
-                System.out.println(pointer.data+" ");
+                System.out.print(pointer.data + " ");
                 pointer = pointer.right;
             }
         }
@@ -85,7 +82,9 @@ public class BinarySearchTree {
             int value = scanner.nextInt();
             bst.insert(value);
         }
-        //bst.level_order(bst.root);
+        System.out.println("Level Order Result - >");
+        bst.level_order(bst.root);
+        System.out.println("\nIn Order Result - >");
         bst.inorder(bst.root);
         scanner.close();
     }
