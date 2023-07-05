@@ -40,13 +40,17 @@ public class SearchKeyMatrix {
     }
 
     public static void main(String[] args) {
+        SearchKeyMatrix2 searchKeyMatrix2 = new SearchKeyMatrix2();
         SearchKeyMatrix searchKeyMatrix = new SearchKeyMatrix();
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int key = scanner.nextInt();
         int[][] matrix = searchKeyMatrix.generate_algo(n);
         searchKeyMatrix.print_matrix(n, matrix);
+        System.out.println("From the first algo");
         searchKeyMatrix.search_algo(n, key, matrix);
+        System.out.println("From second algo");
+        searchKeyMatrix2.search_alt_algo(n, key, matrix);
         scanner.close();
     }
 
