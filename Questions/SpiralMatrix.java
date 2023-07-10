@@ -1,5 +1,6 @@
 package Questions;
 
+//implementation for the spiral matrix
 public class SpiralMatrix {
     public void spiralPrint(int[][] matrix, int rows, int columns) {
         int i, j = 0, k = 0;
@@ -26,7 +27,6 @@ public class SpiralMatrix {
             }
         }
     }
-
     public static void main(String[] args) {
         SearchKeyMatrix matrix = new SearchKeyMatrix();
         SpiralMatrix result = new SpiralMatrix();
