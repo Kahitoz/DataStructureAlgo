@@ -1,3 +1,4 @@
+package General;
 class GeneralTree {
     public Node root;
 

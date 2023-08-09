@@ -1,3 +1,4 @@
+package BinaryTree;
 public class BinaryTree{
     public TreeNode root;
 

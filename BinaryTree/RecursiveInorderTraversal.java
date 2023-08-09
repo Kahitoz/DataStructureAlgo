@@ -1,3 +1,4 @@
+package BinaryTree;
 public class RecursiveInorderTraversal {
 
     public void inordertraverse(BinaryTree.TreeNode root){

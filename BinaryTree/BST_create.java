@@ -1,3 +1,4 @@
+package BinaryTree;
 public class BST_create {
     node root;
 

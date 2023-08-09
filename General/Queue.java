@@ -1,3 +1,4 @@
+package General;
 import java.util.Scanner;
 
 public class Queue {

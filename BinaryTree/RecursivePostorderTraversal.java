@@ -1,3 +1,4 @@
+package BinaryTree;
 public class RecursivePostorderTraversal {
     public void traversal(BinaryTree.TreeNode root){
         if(root==null){

@@ -1,3 +1,4 @@
+package BinaryTree;
 public class IterativeInorderTraversal {
     public void traversal(BinaryTree.TreeNode root){
         if(root == null){

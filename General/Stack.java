@@ -1,3 +1,4 @@
+package General;
 public class Stack {
     Node top;
     int Lenght;

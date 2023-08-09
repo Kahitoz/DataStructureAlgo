@@ -1,3 +1,4 @@
+package BinaryTree;
 public class BST_search_key {
     public BST_create.node search(BST_create.node root, int key){
         if(root==null||key==root.data){
