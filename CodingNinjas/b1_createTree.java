@@ -1,18 +1,21 @@
 package CodingNinjas;
 
-public class b2_AntiPara {
+public class b1_createTree {
     node root;
-    public static class node{
+
+    public class node {
         int data;
         node left;
         node right;
-        public node(int data){
+
+        public node(int data) {
             this.data = data;
             this.left = null;
             this.right = null;
         }
     }
-    public void create_tree(){
+
+    public void create_tree() {
         root = new node(10);
         node node2 = new node(20);
         node node3 = new node(30);
@@ -27,6 +30,7 @@ public class b2_AntiPara {
         node2.right = node5;
         node3.left = node6;
         node3.right = node7;
-        
+
     }
+
 }
